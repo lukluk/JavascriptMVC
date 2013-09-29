@@ -1,11 +1,8 @@
-
 var app={
 	index:function(){
 		_.view.render('home');
 	},	
-	run:function(){		
-		_.loadViews(['startup'],function(){			
-			_.view.render('startup');		
+	run:function(){				
 			_.require(
 				['js/gmaps.js',
 				 'js/jquery.mobile-1.3.2.min.js',
@@ -18,9 +15,8 @@ var app={
 				 'css/jquery.mobile.theme-1.3.2.css',
 				 'css/jquery.jscrollpane.css'
 				],function(){
-					_.loadViews(['map','home'],app.index);
-			});	
-		});		
+					_.loadViews(['home'],app.index);
+			});		
 	}
 }
 
